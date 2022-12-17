@@ -22,6 +22,84 @@ type BinaryTree struct {
 	Root *Node
 }
 
+func (tree *BinaryTree) Print() {
+	tree.Root.Print()
+}
+
+func (node *Node) Print() {
+	if node == nil {
+		return
+	}
+	fmt.Println(node.Value)
+	node.Left.Print()
+	node.Right.Print()
+}
+
+func (tree *BinaryTree) PreOrder() {
+	tree.Root.PreOrder()
+}
+
+func (node *Node) PreOrder() {
+	if node == nil {
+		return
+	}
+	fmt.Println(node.Value)
+	node.Left.PreOrder()
+	node.Right.PreOrder()
+}
+
+func (tree *BinaryTree) InOrder() {
+	tree.Root.InOrder()
+}
+
+func (node *Node) InOrder() {
+	if node == nil {
+		return
+	}
+	node.Left.InOrder()
+	fmt.Println(node.Value)
+	node.Right.InOrder()
+}
+
+func (tree *BinaryTree) PostOrder() {
+	tree.Root.PostOrder()
+}
+
+func (node *Node) PostOrder() {
+	if node == nil {
+		return
+	}
+	node.Left.PostOrder()
+	node.Right.PostOrder()
+	fmt.Println(node.Value)
+}
+
+func (tree *BinaryTree) LevelOrder() {
+	tree.Root.LevelOrder()
+}
+
+func (node *Node) LevelOrder() {
+	if node == nil {
+		return
+	}
+	fmt.Println(node.Value)
+	node.Left.LevelOrder()
+	node.Right.LevelOrder()
+}
+
+func (tree *BinaryTree) ReverseLevelOrder() {
+	tree.Root.ReverseLevelOrder()
+}
+
+func (node *Node) ReverseLevelOrder() {
+	if node == nil {
+		return
+	}
+	fmt.Println(node.Value)
+	node.Right.ReverseLevelOrder()
+	node.Left.ReverseLevelOrder()
+}
+
 func main() {
 	// Create a large general-tree
 	tree := BinaryTree{

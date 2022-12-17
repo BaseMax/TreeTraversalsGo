@@ -35,6 +35,17 @@ func (node *Node) Print() {
 	node.Right.Print()
 }
 
+func (tree *BinaryTree) String() string {
+	return tree.Root.String()
+}
+
+func (node *Node) String() string {
+	if node == nil {
+		return ""
+	}
+	return fmt.Sprintf("%v, ", node.Value) + node.Left.String() + node.Right.String()
+}
+
 func (tree *BinaryTree) PreOrder() {
 	tree.Root.PreOrder()
 }
@@ -100,6 +111,61 @@ func (node *Node) ReverseLevelOrder() {
 	node.Left.ReverseLevelOrder()
 }
 
+func (tree *BinaryTree) StringInOrder() string {
+	return tree.Root.StringInOrder()
+}
+
+func (node *Node) StringInOrder() string {
+	if node == nil {
+		return ""
+	}
+	return node.Left.StringInOrder() + fmt.Sprintf("%v, ", node.Value) + node.Right.StringInOrder()
+}
+
+func (tree *BinaryTree) StringPreOrder() string {
+	return tree.Root.StringPreOrder()
+}
+
+func (node *Node) StringPreOrder() string {
+	if node == nil {
+		return ""
+	}
+	return fmt.Sprintf("%v, ", node.Value) + node.Left.StringPreOrder() + node.Right.StringPreOrder()
+}
+
+func (tree *BinaryTree) StringPostOrder() string {
+	return tree.Root.StringPostOrder()
+}
+
+func (node *Node) StringPostOrder() string {
+	if node == nil {
+		return ""
+	}
+	return node.Left.StringPostOrder() + node.Right.StringPostOrder() + fmt.Sprintf("%v, ", node.Value)
+}
+
+func (tree *BinaryTree) StringLevelOrder() string {
+	return tree.Root.StringLevelOrder()
+}
+
+func (node *Node) StringLevelOrder() string {
+	if node == nil {
+		return ""
+	}
+	return fmt.Sprintf("%v, ", node.Value) + node.Left.StringLevelOrder() + node.Right.StringLevelOrder()
+}
+
+func (tree *BinaryTree) StringReverseLevelOrder() string {
+	return tree.Root.StringReverseLevelOrder()
+}
+
+func (node *Node) StringReverseLevelOrder() string {
+	if node == nil {
+		return ""
+	}
+	return node.Right.StringReverseLevelOrder() + node.Left.StringReverseLevelOrder() + fmt.Sprintf("%v, ", node.Value)
+}
+
 func main() {
 	// Create a large general-tree
 	tree := BinaryTree{
@@ -141,29 +207,59 @@ func main() {
 		},
 	}
 
-	// // Print the tree
-	// fmt.Println("Tree:")
-	// tree.Print()
+	// Print the tree
+	fmt.Println("Tree:")
+	tree.Print()
+	fmt.Println(tree.String())
 
 	// Print the tree in pre-order
 	fmt.Println("PreOrder:")
 	tree.PreOrder()
+	fmt.Println(tree.StringPreOrder())
 
 	// Print the tree in in-order
 	fmt.Println("InOrder:")
 	tree.InOrder()
+	fmt.Println(tree.StringInOrder())
 
 	// Print the tree in post-order
 	fmt.Println("PostOrder:")
 	tree.PostOrder()
+	fmt.Println(tree.StringPostOrder())
 
 	// Print the tree in level-order
 	fmt.Println("LevelOrder:")
 	tree.LevelOrder()
+	fmt.Println(tree.StringLevelOrder())
 
 	// Print the tree in reverse-level-order
 	fmt.Println("ReverseLevelOrder:")
 	tree.ReverseLevelOrder()
+	fmt.Println(tree.StringReverseLevelOrder())
+
+	// // Print the tree
+	// fmt.Println("Tree:")
+	// tree.Print()
+
+	// // Print the tree in pre-order
+	// fmt.Println("PreOrder:")
+	// tree.PreOrder()
+
+	// // Print the tree in in-order
+	// fmt.Println("InOrder:")
+	// tree.InOrder()
+
+	// // Print the tree in post-order
+	// fmt.Println("PostOrder:")
+	// tree.PostOrder()
+
+	// // Print the tree in level-order
+	// fmt.Println("LevelOrder:")
+	// tree.LevelOrder()
+
+	// // Print the tree in reverse-level-order
+	// fmt.Println("ReverseLevelOrder:")
+	// tree.ReverseLevelOrder()
 
 	// // Print the tree in spiral-order
 	// fmt.Println("SpiralOrder:")

@@ -45,7 +45,6 @@ func main() {
 
 	// Print the tree
 	fmt.Println("Tree:")
-	// tree.Print()
 	fmt.Println(tree.String())
 
 	// Print the tree in pre-order

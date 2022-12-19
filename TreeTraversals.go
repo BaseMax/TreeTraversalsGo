@@ -22,19 +22,6 @@ type BinaryTree struct {
 	Root *Node
 }
 
-func (tree *BinaryTree) Print() {
-	tree.Root.Print()
-}
-
-func (node *Node) Print() {
-	if node == nil {
-		return
-	}
-	fmt.Println(node.Value)
-	node.Left.Print()
-	node.Right.Print()
-}
-
 func (tree *BinaryTree) String() string {
 	return tree.Root.String()
 }

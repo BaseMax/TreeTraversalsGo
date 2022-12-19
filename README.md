@@ -1,6 +1,14 @@
 # Tree-Traversals Go
 
-This is a simple Go program that traverses a tree in different ways. (Pre-order, In-order, Post-order)
+This is a simple Go program that traverses a tree in different ways. (Pre-order, In-order, Post-order, and Level-order)
+
+## Methods
+
+- Pre-order
+- In-order
+- Post-order
+- Level-order
+- Reverse level-order
 
 ## Output
 

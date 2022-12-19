@@ -4,22 +4,16 @@ This is a simple Go program that traverses a tree in different ways. (Pre-order,
 
 ## Output
 
-**Tree:**
+**InOrder:**
 
 ```
-1, 2, 4, 8, 9, 5, 10, 11, 3, 7, 12, 13
+8, 4, 9, 2, 10, 5, 11, 1, 3, 12, 7, 13
 ```
 
 **PreOrder:**
 
 ```
 1, 2, 4, 8, 9, 5, 10, 11, 3, 7, 12, 13
-```
-
-**InOrder:**
-
-```
-8, 4, 9, 2, 10, 5, 11, 1, 3, 12, 7, 13
 ```
 
 **PostOrder:**
